@@ -1,8 +1,7 @@
 pub fn factorial_recursive(n: u128) -> u128 {
-    if n <= 1 {
-        1
-    } else {
-        n * factorial_recursive(n - 1)
+    match n {
+        0 | 1 => 1,
+        _ => n * factorial_recursive(n - 1),
     }
 }
 
